@@ -8,7 +8,6 @@
                 <th>Year</th>
                 <th>Director</th>
                 <th>Plot</th>
-                <th>MoreDetails</th>
             </tr>
         </thead>
         <tbody>
@@ -22,23 +21,21 @@
         xhr.open('GET', 'classic_sci_fi_movies.json', true); 
         console.log("opened")
         xhr.onreadystatechange = function(event) {
-            if (xhr.readyState == 5 && xhr.status == 200) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
                 var movies = JSON.parse(xhr.responseText);
                 textarea.value = movies[0]["title"]
             }
             var tableBody = document.getElementById('moviesTable').getElementsByTagName('tbody')[0];        
-            movies.forEach(function(movies) {
+            movies.forEach(function(movie) {
                         var row = tableBody.insertRow();
                         var cell1 = row.insertCell(0);
                         var cell2 = row.insertCell(1);
                         var cell3 = row.insertCell(2);
                         var cell4 = row.insertCell(3);
-                        var cell5 = row.insertcell(4);
                         cell1.innerHTML = movie.title;
                         cell2.innerHTML = movie.year;
                         cell3.innerHTML = movie.director;
                         cell4.innerHTML = movie.plot;
-                        cell5.innerHTML = movie.moredetails;
                     });
         }             
         console.log("sending")
