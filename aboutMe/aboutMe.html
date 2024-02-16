@@ -1,61 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captain America</title>
-    <style>
-        body {
-            font-family: Times New Roamn, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-attachment: fixed;  
-            background-size: cover;
-            color: #333;
-        }
-        header {
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #007bff;
-            text-align: center;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        }
-        p {
-            margin-bottom: 20px;
-            padding: 0 20px;
-            text-align: justify;
-        }
-        section {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="homestyles.css">
 </head>
 <body>
-    <header>
-        <h1>Captain America</h1>
-    </header>
-    <div class="container">
-        <img src="data:image/jpeg;base64,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" alt="Captain America">
-        <section>
-            <p>Captain America is a superhero created by Joe Simon and Jack Kirby who appears in American comic books published by Marvel Comics. The character first appeared in Captain America Comics #1, published on December 20, 1940, by Timely Comics, a corporate predecessor to Marvel. Captain America's civilian identity is Steve Rogers, a frail man enhanced to the peak of human physical perfection by an experimental "super-soldier serum" after joining the United States Army to aid the country's efforts in World War II. Equipped with an American flag-inspired costume and a virtually indestructible shield, Captain America and his sidekick Bucky Barnes clashed frequently with the villainous Red Skull and other members of the Axis powers. In the final days of the war, an accident left Captain America frozen in a state of suspended animation until he was revived in modern times. He resumes his exploits as a costumed hero and becomes leader of the superhero team the Avengers, but frequently struggles as a "man out of time" to adjust to the new era.</p>
-        </section>
-    </div>
+	<div class="hero">		
+		<div class="content">
+			
+			<h1 class="animation">Captain America</h1>
+			<p class="animation"> Captain America is a superhero created by Joe Simon and Jack Kirby who appears in American comic books published by Marvel Comics. The character first appeared in Captain America Comics #1, published on December 20, 1940, by Timely Comics, a corporate predecessor to Marvel. Captain America's civilian identity is Steve Rogers, a frail man enhanced to the peak of human physical perfection by an experimental "super-soldier serum" after joining the United States Army to aid the country's efforts in World War II. Equipped with an American flag-inspired costume and a virtually indestructible shield, Captain America and his sidekick Bucky Barnes clashed frequently with the villainous Red Skull and other members of the Axis powers. In the final days of the war, an accident left Captain America frozen in a state of suspended animation until he was revived in modern times. He resumes his exploits as a costumed hero and becomes leader of the superhero team the Avengers, but frequently struggles as a "man out of time" to adjust to the new era.</p>
+			
+		</div>
+		<img src="image.jpg" class="feature-img animation">
+	</div>
+	
 </body>
 </html>
