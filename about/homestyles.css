@@ -1,0 +1,40 @@
+*{
+    font-family: 'Arial', sans-serif;
+	font-size:30px;
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+.hero{
+	width: 100%;
+	min-height: 100vh;
+	background-image: url(bg.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 10px 10%;
+}
+.imp{
+	padding:10px 40%;
+}
+
+.img{
+	padding:30px;
+	border-radius:50%;
+}
+
+.content{
+	max-width: 100%;
+}
+
+.content h1{
+	font-size: 50px;
+	color: #000042;
+}
+
+.content p{
+	margin: 20px 0px 30px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	color: #010110	;
+
+}
