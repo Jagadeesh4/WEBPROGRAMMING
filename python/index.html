@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>Image Steganography</title>
+</head>
+<body>
+    <h1>Image Steganography</h1>
+    <form action="/encode" method="POST" enctype="multipart/form-data">
+        <label for="image">Select Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <br>
+        <label for="data">Enter Data:</label>
+        <textarea id="data" name="data"></textarea>
+        <br>
+        <input type="submit" value="Encode">
+    </form>
+</body>
+</html>
