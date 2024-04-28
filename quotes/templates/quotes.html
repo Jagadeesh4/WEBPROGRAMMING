@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotes</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quote-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .quote-table th,
+        .quote-table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .quote-table td:last-child {
+            white-space: nowrap;
+        }
+
+        .add-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-link:hover {
+            background-color: #218838;
+        }
+
+        .edit-btn, .delete-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-right: 5px;
+        }
+
+        .edit-btn:hover, .delete-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Quotes</h1>
+    <table class="quote-table">
+        <thead>
+        <tr>
+            <th>Quote</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+        <tr>
+            <td>{{ item["text"] }}</td>
+            <td><em>-- {{ item["author"] }}</em></td>
+            <td>
+                <a href="/edit/{{ item['_id'] }}" class="edit-btn">Edit</a>
+                <a href="/delete/{{ item['_id'] }}" class="delete-btn">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/add" class="add-link">Add a new quote!</a>
+</div>
+</body>
+</html>
