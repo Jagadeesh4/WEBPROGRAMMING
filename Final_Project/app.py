@@ -159,13 +159,13 @@ def delete_quote():
 
 # Route for editing a quote
 @app.route('/editQuote', methods=['GET', 'POST'])
-def edit_quote():
+def editQuote():
     if request.method == 'GET':
         quote_id = request.args.get('quote_id')
         if quote_id:
             quote = quotes_collection.find_one({'_id': ObjectId(quote_id)})
             if quote:
-                return render_template('edit_quote.html', quote=quote)
+                return render_template('editQuote.html', quote=quote)
             else:
                 show_flash("Quote not found.", "error")
         else:
