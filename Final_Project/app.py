@@ -158,7 +158,7 @@ def delete_quote():
         return redirect(url_for('login'))
 
 # Route for editing a quote
-@app.route('/edit_quote', methods=['GET', 'POST'])
+@app.route('/editQuote', methods=['GET', 'POST'])
 def edit_quote():
     if request.method == 'GET':
         quote_id = request.args.get('quote_id')
