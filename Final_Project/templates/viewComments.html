@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Comments</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #555; /* Dark grey color for heading */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .list-group-item {
+            background-color: #f8f9fa; /* Light grey background color for list items */
+            border-color: #dee2e6; /* Light grey border color for list items */
+            color: #333; /* Dark grey text color for list items */
+        }
+        .btn-secondary {
+            background-color: #555; /* Dark grey button background color */
+            border-color: #555; /* Dark grey button border color */
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #333; /* Darker grey button background color on hover */
+            border-color: #333; /* Darker grey button border color on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Comments</h1>
+    <ul class="list-group">
+        {% for comment in quote_comments %}
+        <li class="list-group-item">{{ comment.comment_text }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Go Back Button -->
+    <a href="{{ url_for('try_our_app') }}" class="btn btn-secondary mt-3"
+       >Go Back</a
+    >
+</div>
+</body>
+</html>
