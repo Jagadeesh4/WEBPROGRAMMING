@@ -139,6 +139,9 @@
         <button class="btn btn-primary action-button" @click="goToMyQuotes">
             My Quotes
         </button>
+		<button class="btn btn-primary action-button" @click="tryOurApp">
+            Try Our App
+        </button>
         <button class="btn btn-primary action-button" @click="viewUserComments">
             Your Comments
         </button>
@@ -165,6 +168,9 @@
             goToMyQuotes() {
                 window.location.href = "/my_quotes";
             },
+			tryOurApp() {
+                window.location.href = "/try_our_app";
+            },
             viewUserComments() {
                 window.location.href = "/view_user_comments"; // Redirect to view_user_comments route
             },
@@ -181,6 +187,5 @@
 
     app.mount("#app");
 </script>
-    
 </body>
 </html>
